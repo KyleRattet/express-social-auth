@@ -8,11 +8,11 @@ var GitHubStrategy = require('passport-github').Strategy;
 var User = require('../models/user');
 var mongoose = require('mongoose');
 //require config
-var config = require('../../_config');
+// var config = require('../../_config');
 
 //environment variables
-var GITHUB_CLIENT_ID = process.env.GITHUB_CLIENT_ID || config.GITHUB_CLIENT_ID;
-var GITHUB_CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET || config.GITHUB_CLIENT_SECRET;
+var GITHUB_CLIENT_ID = process.env.GITHUB_CLIENT_ID
+var GITHUB_CLIENT_SECRET = process.env.GITHUB_CLIENT_SECRET
 
 passport.use(new GitHubStrategy({
     clientID: GITHUB_CLIENT_ID,
