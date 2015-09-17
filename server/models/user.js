@@ -8,6 +8,6 @@ var User = new Schema ({
 
 //connect to a database
 
-mongoose.connect(process.env.MONGO_URI || 'mongodb://localhost/github-auth');
+mongoose.connect(process.env.MONGOLAB_URI || 'mongodb://localhost/github-auth');
 
 module.exports = mongoose.model('users', User);
